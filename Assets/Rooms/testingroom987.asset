@@ -1,0 +1,402 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8485993192872873998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 410f2687-b9df-4f96-987f-97eaf5d018fb
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 579
+    y: 449
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southNorthConnection: 0
+  southWestNorthEastConnection: 0
+  westEastConnection: 0
+  northWestSouthEastConnection: 1
+--- !u!114 &-8153584469022694263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 514e0c93-709b-4d4b-8bef-83f3f99460f3
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 982
+    y: 648
+    width: 300
+    height: 150
+  text: 
+  locations:
+  - 6d2e46d8-4b35-4ad6-9d18-6f235e30c2cc
+  - 410f2687-b9df-4f96-987f-97eaf5d018fb
+  - 816ce508-b13a-49df-a383-fb8be371eb21
+  - 1612d205-5541-4d52-9c93-9f5db197f0c3
+  - ada1d150-39a4-40dd-949b-7953dca4b564
+  - 93126e5a-89ce-4f4c-a07d-ce896220bfa9
+  - 22afd268-7bd9-4c42-a3d0-af18127aaa52
+  - e667c1ba-2617-4dd8-b0ac-8ae3ef918dc2
+  isLocationChild: 0
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - North West
+  - North East
+  - East
+  - South East
+  - South
+  - South West
+  - West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 1
+  westConnection: 1
+  northEastSouthWestConnection: 1
+  southEastNorthWestConnection: 1
+  southNorthConnection: 0
+  southWestNorthEastConnection: 1
+  westEastConnection: 0
+  northWestSouthEastConnection: 1
+--- !u!114 &-6425659708356386126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 22afd268-7bd9-4c42-a3d0-af18127aaa52
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 582
+    y: 848
+    width: 300
+    height: 150
+  text: 
+  locations:
+  - 93126e5a-89ce-4f4c-a07d-ce896220bfa9
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North East
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southNorthConnection: 0
+  southWestNorthEastConnection: 1
+  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-6300149677545751776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 1612d205-5541-4d52-9c93-9f5db197f0c3
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1582
+    y: 649
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southNorthConnection: 0
+  southWestNorthEastConnection: 0
+  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-2289201731021531884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: e667c1ba-2617-4dd8-b0ac-8ae3ef918dc2
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 382
+    y: 648
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southNorthConnection: 0
+  southWestNorthEastConnection: 0
+  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-1617469083420240314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 93126e5a-89ce-4f4c-a07d-ce896220bfa9
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 983
+    y: 948
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southNorthConnection: 0
+  southWestNorthEastConnection: 0
+  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed915575262d5a429764dc63559dea0, type: 3}
+  m_Name: testingroom987
+  m_EditorClassIdentifier: 
+  locations:
+  - {fileID: -8153584469022694263}
+  - {fileID: 8430459944406599170}
+  - {fileID: -8485993192872873998}
+  - {fileID: 4693672473703447394}
+  - {fileID: -6300149677545751776}
+  - {fileID: 5993840439023503546}
+  - {fileID: -1617469083420240314}
+  - {fileID: -6425659708356386126}
+  - {fileID: -2289201731021531884}
+  newNodeOffset: {x: -600, y: 0}
+--- !u!114 &4693672473703447394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 816ce508-b13a-49df-a383-fb8be371eb21
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1382
+    y: 449
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 1
+  northEastSouthWestConnection: 1
+  southEastNorthWestConnection: 0
+  southNorthConnection: 0
+  southWestNorthEastConnection: 0
+  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &5993840439023503546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: ada1d150-39a4-40dd-949b-7953dca4b564
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1382
+    y: 849
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 1
+  southNorthConnection: 0
+  southWestNorthEastConnection: 0
+  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &8430459944406599170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 6d2e46d8-4b35-4ad6-9d18-6f235e30c2cc
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 980
+    y: 348
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southNorthConnection: 0
+  southWestNorthEastConnection: 0
+  westEastConnection: 0
+  northWestSouthEastConnection: 0
