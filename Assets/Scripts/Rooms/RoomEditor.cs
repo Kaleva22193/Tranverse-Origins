@@ -30,6 +30,8 @@ namespace RPG.Rooms.Editor
         const float backgroundSize = 50f;
 
         [MenuItem ("Window/Room Editor")]
+
+        
         public static void ShowEditorWindow()
         {
             EditorWindow.GetWindow(typeof(RoomEditor), false, "Room Editor");
@@ -60,6 +62,8 @@ namespace RPG.Rooms.Editor
             playerNodeStyle.normal.textColor = Color.magenta; //doesnt do much
             playerNodeStyle.padding = new RectOffset(20, 20, 20, 20);
             playerNodeStyle.border = new RectOffset(12, 12, 12, 12);
+
+            
         }
         private void OnSelectionChange()
         {
@@ -89,7 +93,7 @@ namespace RPG.Rooms.Editor
                 {
                     DrawConnections(location);
  
-                    FindOtherChildConnections(location);
+                    
                 }
                 foreach (RoomLocation location in selectedRoom.GetAllLocations())
                 {
@@ -171,7 +175,6 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.NorthWest.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.NorthWest.ToString());
                     location.SetNorthWestSouthEastConnection(true);
                     movementLocation = Directions.SouthEast.ToString();
                     
@@ -182,10 +185,8 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.North.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.North.ToString());
                     location.SetNorthConnection(true);
                     movementLocation = Directions.South.ToString();
-                    //buttonDirectionPressed = "North";
                 }
             }
             if (location.MovementDirections().IndexOf(Directions.NorthEast.ToString()) < 0)
@@ -193,7 +194,6 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.NorthEast.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.NorthEast.ToString());
                     location.SetNorthEastSouthWestConnection(true);
                     movementLocation = Directions.SouthWest.ToString();
                 }
@@ -205,7 +205,6 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.West.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.West.ToString());
                     location.SetWestConnection(true);
                     movementLocation = Directions.East.ToString();
                 }
@@ -219,7 +218,6 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.East.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.East.ToString());
                     location.SetEastConnection(true);
                     movementLocation = Directions.West.ToString();                    
                 }
@@ -231,7 +229,6 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.SouthWest.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.SouthWest.ToString());
                     location.SetSouthWestNorthEastConnection(true);
                     movementLocation = Directions.NorthEast.ToString();
                 }
@@ -241,10 +238,8 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.South.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.South.ToString());
                     location.SetSouthConnection(true);
                     movementLocation = Directions.North.ToString();
-                    //buttonDirectionPressed = Directions.South.ToString();
                 }
             }
             if (location.MovementDirections().IndexOf(Directions.SouthEast.ToString()) < 0)
@@ -252,7 +247,6 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.SouthEast.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetMovementLocations(Directions.SouthEast.ToString());
                     location.SetSouthEastNorthWestConnection(true);
                     movementLocation = Directions.NorthWest.ToString();
                 }
@@ -278,43 +272,49 @@ namespace RPG.Rooms.Editor
 
             GUILayout.EndHorizontal();
             GUILayout.EndArea();
-        }
-private void DrawLinkingDirections(RoomLocation location)
-{
-    if (linkingParentNode == null)
-    {
-        if(GUILayout.Button("Link Locations"))
-        {
-            linkingParentNode = location;
-        }
-    }
-    else if (linkingParentNode == location)
-    {
-        if(GUILayout.Button("Cancel"))
-        {
-            linkingParentNode = null;
-        }
-    }
-    else if (linkingParentNode.GetLocation().Contains(location.name))
-    {
-        if(GUILayout.Button("Unlink"))
-        {
-            linkingParentNode.RemoveChild(location.name);
-            //Add in line t remove direction from the list
-            linkingParentNode = null;
-        }
-    }
-    else 
-    {
-        if (GUILayout.Button("Move Here"))
-        {
-            linkingParentNode.AddChild(location.name);
-            //Add direction to list of movement locations
-            linkingParentNode = null;
-        }
-    }
 
-}
+            
+        }
+        private void DrawLinkingDirections(RoomLocation location)
+        {
+            
+            if (linkingParentNode == null)
+            {
+                if (GUILayout.Button("Link Locations"))
+                {
+                    linkingParentNode = location;
+                }
+
+            }
+            else if (linkingParentNode == location)
+            {
+                if(GUILayout.Button("Cancel"))
+                {
+                    linkingParentNode = null;
+                }
+            }
+            else if (linkingParentNode.GetLocation().Contains(location.name))
+            {
+                if(GUILayout.Button("Unlink"))
+                {
+                    linkingParentNode.RemoveChild(location.name);
+                    //Add in line to remove direction from the list
+                    linkingParentNode = null;
+                }
+            }
+            else 
+            {
+                if (GUILayout.Button("Move Here"))
+                {
+                    linkingParentNode.AddChild(location.name);
+                    //Add direction to list of movement locations
+                    
+                    linkingParentNode = null;
+                }
+            }
+
+        }
+    
         private void DrawConnections(RoomLocation location)
         {
             Vector3 startPoint = new Vector2(location.GetRect().center.x, location.GetRect().center.y);
@@ -341,20 +341,7 @@ private void DrawLinkingDirections(RoomLocation location)
             }
         }
        
-        private void FindOtherChildConnections(RoomLocation location)
-        {
-            foreach (RoomLocation childLocations in selectedRoom.GetAllLocations(location))
-            {
-                if (location.MovementDirections().Contains(Directions.North.ToString()) && childLocations.MovementDirections().Contains(Directions.SouthWest.ToString()))
-                {
-                    childLocations.SetWestConnection(true);
-                }
-                if (location.MovementDirections().Contains(Directions.South.ToString()) && childLocations.MovementDirections().Contains(Directions.NorthWest.ToString()))
-                {
-                    childLocations.SetWestConnection(true);
-                }
-            }
-        }
+
         private RoomLocation GetNodeAtPoint(Vector2 point)
         {
             RoomLocation foundNode = null;

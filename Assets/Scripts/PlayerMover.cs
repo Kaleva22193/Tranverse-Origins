@@ -2,52 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+using System;
 
 namespace RPG.Rooms
 {
     public class PlayerMover : MonoBehaviour
     {
-        RoomManager roomManager;
-        public Vector2 playerLocation;
-        string roomName;
-        string roomLocation = "Entrance";
-        List<string> roomTriggers = new List<string>();
-        [SerializeField] GameObject narratorPanel;
+        [SerializeField] Room testRoom;
+        Room currentRoom;
+        RoomLocation currentLocation;
 
-
-
-        // Start is called before the first frame update
-        void Start()
+        public event Action onLocationUpdated;
+        
+        public void StartRoom(Room newRoom)
         {
-            
+            currentRoom = newRoom;
+            currentLocation = currentRoom.GetRootNode();
+            TriggerEnterAction();
+            onLocationUpdated();
         }
-
-        // Update is called once per frame
-        void Update()
+        public void LeaveRoom()
         {
-
+            TriggerExitAction();
+            currentLocation = null;
+            currentRoom = null;
+            onLocationUpdated();
         }
-        public void MovePlayerPosition(Vector2Int position)
+        public bool IsActive()
         {
-            // Move North
-
-            // Move East 
-            // Move South
-        }        
-        public void PopulateRoomTriggers(string room)
+            return currentLocation != null;
+        }
+        public string GetText()
         {
-            if (room == "Entrance")
+            if (currentLocation == null)
             {
-                //Actions
-                narratorPanel.SetActive(true);
-                /*narrator panel text populate*/
-                //Movement directions
-                //NPC's
-                //interactable Objects
-                //static objects
-                //traps
-
+                return "";
             }
+            return currentLocation.GetText();
+        }
+        public IEnumerable<RoomLocation> GetDirections()
+        {
+            return currentRoom.GetPlayerChildren(currentLocation);
+        }
+        public void SelectMove(RoomLocation chosenLocation)
+        {
+            currentLocation = chosenLocation;
+            TriggerEnterAction();
+            Next();
+        }
+        public void Next()
+        {
+
         }
     }
 }

@@ -36,10 +36,47 @@ MonoBehaviour:
   westConnection: 0
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
-  southNorthConnection: 0
   southWestNorthEastConnection: 0
-  westEastConnection: 0
   northWestSouthEastConnection: 1
+--- !u!114 &-8319294073188433747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 38d2e78e-8788-481e-a456-e7519bc989cd
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1875
+    y: 1045
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 0
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South
+  - South
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
 --- !u!114 &-8153584469022694263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +120,9 @@ MonoBehaviour:
   - South
   - South West
   - West
+  - East
+  - East
+  - North
   onEnterAction: 
   onExitAction: 
   northConnection: 1
@@ -91,9 +131,7 @@ MonoBehaviour:
   westConnection: 1
   northEastSouthWestConnection: 1
   southEastNorthWestConnection: 1
-  southNorthConnection: 0
   southWestNorthEastConnection: 1
-  westEastConnection: 0
   northWestSouthEastConnection: 1
 --- !u!114 &-6425659708356386126
 MonoBehaviour:
@@ -109,13 +147,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 582
-    y: 848
+    x: 574
+    y: 863
     width: 300
     height: 150
   text: 
   locations:
   - 93126e5a-89ce-4f4c-a07d-ce896220bfa9
+  - e667c1ba-2617-4dd8-b0ac-8ae3ef918dc2
+  - d079cc53-25ae-4e2b-ab8b-87f8db4e49d4
   isLocationChild: 1
   hasNPC: 0
   isEntrance: 0
@@ -125,17 +165,20 @@ MonoBehaviour:
   movementDirections:
   - North East
   - East
+  - North
+  - South
+  - East
+  - East
+  - North
   onEnterAction: 
   onExitAction: 
-  northConnection: 0
+  northConnection: 1
   eastConnection: 1
-  southConnection: 0
+  southConnection: 1
   westConnection: 0
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
-  southNorthConnection: 0
   southWestNorthEastConnection: 1
-  westEastConnection: 0
   northWestSouthEastConnection: 0
 --- !u!114 &-6300149677545751776
 MonoBehaviour:
@@ -165,6 +208,8 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - West
+  - East
+  - East
   onEnterAction: 
   onExitAction: 
   northConnection: 0
@@ -173,9 +218,89 @@ MonoBehaviour:
   westConnection: 0
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
-  southNorthConnection: 0
   southWestNorthEastConnection: 0
-  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-4378546251342553780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: fa1a3e89-8a1c-424a-8382-3a1e6180b5b9
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1382
+    y: 1149
+    width: 300
+    height: 150
+  text: 
+  locations:
+  - d6febe63-f6c6-456c-a934-d0290e48af1a
+  isLocationChild: 0
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - East
+  - East
+  - East
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-3418643250145529656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 6f8bda9e-1127-4ed5-a8d0-290f1b1c85f7
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 574
+    y: 1763
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 0
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
   northWestSouthEastConnection: 0
 --- !u!114 &-2289201731021531884
 MonoBehaviour:
@@ -205,17 +330,16 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - East
+  - South
   onEnterAction: 
   onExitAction: 
   northConnection: 0
   eastConnection: 0
-  southConnection: 0
+  southConnection: 1
   westConnection: 1
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
-  southNorthConnection: 0
   southWestNorthEastConnection: 0
-  westEastConnection: 0
   northWestSouthEastConnection: 0
 --- !u!114 &-1617469083420240314
 MonoBehaviour:
@@ -236,7 +360,8 @@ MonoBehaviour:
     width: 300
     height: 150
   text: 
-  locations: []
+  locations:
+  - 66d27889-9ed1-403d-98d3-c9a98fbba99a
   isLocationChild: 1
   hasNPC: 0
   isEntrance: 0
@@ -245,17 +370,59 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - North
+  - West
+  - South
+  - North
   onEnterAction: 
   onExitAction: 
   northConnection: 1
   eastConnection: 0
-  southConnection: 0
+  southConnection: 1
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-401522276403262268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 704f9e14-4ee8-4c1b-b4b0-2b95ceb3fa2b
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 574
+    y: 1463
+    width: 300
+    height: 150
+  text: 
+  locations:
+  - 6f8bda9e-1127-4ed5-a8d0-290f1b1c85f7
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - South
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 1
   westConnection: 0
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
-  southNorthConnection: 0
   southWestNorthEastConnection: 0
-  westEastConnection: 0
   northWestSouthEastConnection: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -279,7 +446,95 @@ MonoBehaviour:
   - {fileID: -1617469083420240314}
   - {fileID: -6425659708356386126}
   - {fileID: -2289201731021531884}
-  newNodeOffset: {x: -600, y: 0}
+  - {fileID: 631673604419090174}
+  - {fileID: 1796172423857227186}
+  - {fileID: -401522276403262268}
+  - {fileID: -3418643250145529656}
+  - {fileID: -4378546251342553780}
+  - {fileID: 7751894531548262053}
+  - {fileID: -8319294073188433747}
+  newNodeOffset: {x: 0, y: -300}
+--- !u!114 &631673604419090174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 66d27889-9ed1-403d-98d3-c9a98fbba99a
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 995
+    y: 1215
+    width: 300
+    height: 150
+  text: 
+  locations: []
+  isLocationChild: 0
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - South
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &1796172423857227186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: d079cc53-25ae-4e2b-ab8b-87f8db4e49d4
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 574
+    y: 1163
+    width: 300
+    height: 150
+  text: 
+  locations:
+  - 704f9e14-4ee8-4c1b-b4b0-2b95ceb3fa2b
+  isLocationChild: 0
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - South
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
 --- !u!114 &4693672473703447394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1382
+    x: 1384
     y: 449
     width: 300
     height: 150
@@ -316,9 +571,7 @@ MonoBehaviour:
   westConnection: 1
   northEastSouthWestConnection: 1
   southEastNorthWestConnection: 0
-  southNorthConnection: 0
   southWestNorthEastConnection: 0
-  westEastConnection: 0
   northWestSouthEastConnection: 0
 --- !u!114 &5993840439023503546
 MonoBehaviour:
@@ -339,7 +592,8 @@ MonoBehaviour:
     width: 300
     height: 150
   text: 
-  locations: []
+  locations:
+  - fa1a3e89-8a1c-424a-8382-3a1e6180b5b9
   isLocationChild: 1
   hasNPC: 0
   isEntrance: 0
@@ -348,17 +602,60 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - North West
+  - South
   onEnterAction: 
   onExitAction: 
   northConnection: 0
   eastConnection: 0
-  southConnection: 0
+  southConnection: 1
   westConnection: 1
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 1
-  southNorthConnection: 0
   southWestNorthEastConnection: 0
-  westEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &7751894531548262053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: d6febe63-f6c6-456c-a934-d0290e48af1a
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1875
+    y: 1345
+    width: 300
+    height: 150
+  text: 
+  locations:
+  - 38d2e78e-8788-481e-a456-e7519bc989cd
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  - South
+  - North
+  - East
+  - East
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
   northWestSouthEastConnection: 0
 --- !u!114 &8430459944406599170
 MonoBehaviour:
@@ -396,7 +693,5 @@ MonoBehaviour:
   westConnection: 0
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
-  southNorthConnection: 0
   southWestNorthEastConnection: 0
-  westEastConnection: 0
   northWestSouthEastConnection: 0
