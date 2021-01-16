@@ -25,9 +25,12 @@ namespace RPG.UI
             playerMover = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMover>();
             playerMover.onLocationUpdated += UpdateUI;
 
-  
+            
+
+
             UpdateUI();
         }
+
         void UpdateUI()
         {
             gameObject.SetActive(playerMover.IsActive());
@@ -35,7 +38,7 @@ namespace RPG.UI
             {
                 return;
             }
- 
+
             if (!playerMover.IsMoving())
             {
                 Debug.Log("UI Updated");
@@ -48,6 +51,7 @@ namespace RPG.UI
             }
 
         }
+
         private void DisplayMoveChoices()
         {
             //look at current location for list of movement directions
@@ -57,13 +61,11 @@ namespace RPG.UI
             for (int i = 0; i < moveButtons.Length; i++)
             {
                 moveButtons[i].SetActive(false);
-                Image buttonImage = moveButtons[i].GetComponent<Image>();
-                buttonImage.enabled = false;
             }
+
             int listCounter = 0;
             foreach (string direction in playerMover.GetMovementDirections())
             {
-
                 Debug.Log(listCounter);
                 Debug.Log(direction);
                 if (direction == Directions.NorthWest.ToString())
@@ -101,26 +103,13 @@ namespace RPG.UI
                 listCounter++;               
             }
         }
+        
         private void ButtonImageSetterOn(int number, int counter)
         {
-
-            for (int i = 0; i < moveButtons.Length; i++)
-            {
-                moveButtons[i].SetActive(true);
-                
-                if (i == number)
-                {
-                    Image buttonImage = moveButtons[i].GetComponent<Image>();
-                    buttonImage.enabled = true;
-                    Button button = moveButtons[i].GetComponentInChildren<Button>();
-                    Debug.Log("Counter is set at: " + counter);
-                    //button.onClick.RemoveAllListeners();
-                    button.onClick.AddListener(() => LinkDirectiontoLocation(counter));
-                }                           
-
-            }
-            
+            if(moveButtons.Length > number)
+                moveButtons[number].SetActive(true);
         }
+
         private void LinkDirectiontoLocation(int number)
         {
             List<RoomLocation> children = playerMover.GetChoices().ToList();
@@ -132,8 +121,33 @@ namespace RPG.UI
                     UpdateUI();
                 }
             }
-            
         }
+
+        public void MoveDirection(int dir)
+        {
+            Directions direction = (Directions) dir;
+
+            Debug.Log("Moving : " + direction.ToString());
+
+            int roomIndex = 0;
+            foreach (string moveDirection in playerMover.GetMovementDirections())
+            {
+                Debug.Log(moveDirection);
+                if (moveDirection == direction.ToString())
+                {
+                    Debug.Log("room index is: " + roomIndex);
+                    if(playerMover.GetMovementDirections().Count <= roomIndex)
+                    {
+                        Debug.LogError("Room index is missing from playerMover.GetMovementDirections()!!", playerMover);
+                        return;
+                    }
+                    playerMover.SelectMove(playerMover.GetChoices().ElementAt(roomIndex));
+                }
+                roomIndex++;
+            }
+            UpdateUI();
+        }
+
         //private void BuildMovementButtons()
         //{
         //    foreach(Transform item in directionRoot)
