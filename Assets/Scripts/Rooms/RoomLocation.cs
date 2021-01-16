@@ -55,7 +55,6 @@ namespace RPG.Rooms
         {
             return locations;
         }
-        public 
         public bool IsLocationChild()
         {
             return isLocationChild;

@@ -51,16 +51,14 @@ namespace RPG.UI
         }
 
         private void BuildChoiceList()
-        {
-            
+        {            
             foreach (Transform item in choiceRoot)
             {
                 Destroy(item.gameObject);
             }
            
             foreach (DialogueNode choice in playerConversant.GetChoices())
-            {
-                
+            {                
                 GameObject choiceInstance = Instantiate(choicePreFab, choiceRoot);
                 foreach (Transform child in choiceInstance.transform)
                 {

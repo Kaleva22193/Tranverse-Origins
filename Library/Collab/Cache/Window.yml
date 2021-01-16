@@ -14,30 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Rooms/GuardRoom.asset
-    - Assets/Rooms/GuardRoom.asset.meta
+    - Assets/Rooms/TestMovingRoom.asset
+    - Assets/Rooms/TestMovingRoom.asset.meta
     - Assets/Rooms/testingroom987.asset
     - Assets/Rooms/testingroom987.asset.meta
     - Assets/Scenes/Game_Area.unity
-    - Assets/Scripts/Enums.meta
-    - Assets/Scripts/Enums/Directions.cs
-    - Assets/Scripts/Enums/Directions.cs.meta
-    - Assets/Scripts/Room.cs
-    - Assets/Scripts/Room.cs.meta
-    - Assets/Scripts/RoomLocation.cs
-    - Assets/Scripts/RoomLocation.cs.meta
+    - Assets/Scripts/Dialogue/DialogueUI.cs
+    - Assets/Scripts/PlayerMover.cs
     - Assets/Scripts/RoomManager.cs
-    - Assets/Scripts/Rooms/Editor/Resources/background.png.meta
-    - Assets/Scripts/Rooms/Editor/RoomEditor.cs
-    - Assets/Scripts/Rooms/Editor/RoomEditor.cs.meta
+    - Assets/Scripts/RoomManager.cs.meta
     - Assets/Scripts/Rooms/Room.cs
     - Assets/Scripts/Rooms/Room.cs.meta
     - Assets/Scripts/Rooms/RoomEditor.cs
-    - Assets/Scripts/Rooms/RoomEditor.cs.meta
     - Assets/Scripts/Rooms/RoomLocation.cs
     - Assets/Scripts/Rooms/RoomLocation.cs.meta
+    - Assets/Scripts/Rooms/RoomUI.cs
+    - Assets/Scripts/Rooms/RoomUI.cs.meta
     - 
-    m_Values: 0000000000000000000000000000000000000000000000
+    m_Values: 0000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

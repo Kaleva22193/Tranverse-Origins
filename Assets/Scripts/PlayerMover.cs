@@ -11,10 +11,18 @@ namespace RPG.Rooms
     {
         [SerializeField] Room testRoom;
         Room currentRoom;
-        RoomLocation currentLocation;
+        RoomLocation currentLocation = null;
+        bool isMoving = false;
 
         public event Action onLocationUpdated;
-        
+
+
+        IEnumerator Start()
+        {
+            yield return new WaitForSeconds(2);
+            StartRoom(testRoom);
+        }
+
         public void StartRoom(Room newRoom)
         {
             currentRoom = newRoom;
@@ -41,19 +49,55 @@ namespace RPG.Rooms
             }
             return currentLocation.GetText();
         }
-        public IEnumerable<RoomLocation> GetDirections()
+        public IEnumerable<RoomLocation> GetChoices()
         {
             return currentRoom.GetPlayerChildren(currentLocation);
         }
         public void SelectMove(RoomLocation chosenLocation)
         {
             currentLocation = chosenLocation;
-            TriggerEnterAction();
-            Next();
+            //isMoving = true;
+            //TriggerEnterAction();            
         }
-        public void Next()
+        private void TriggerEnterAction()
         {
-
+            if (currentLocation != null)
+            {
+                isMoving = false;
+                TriggerAction(currentLocation.GetOnEnterAction());
+            }
+        }
+        public List<string> GetMovementDirections()
+        {
+            if (currentLocation != null)
+            {
+                return currentLocation.MovementDirections();
+            }
+            List<string> noDirection = new List<string>();
+            return noDirection;
+        }
+        private void TriggerAction(string action)
+        {
+            if (action == "")
+            {
+                return;
+            }
+            //foreach (DialogueTrigger trigger in currentConversant.GetComponents<DialogueTrigger>())
+            //{
+            //    trigger.Trigger(action);
+            //}
+        }
+        private void TriggerExitAction()
+        {
+            if (currentLocation != null)
+            {
+                isMoving = false;
+                TriggerAction(currentLocation.GetOnExitAction());
+            }
+        }
+        public bool IsMoving()
+        {
+            return isMoving;
         }
     }
 }
