@@ -35,17 +35,17 @@ namespace RPG.UI
             {
                 return;
             }
-            DisplayMoveChoices();
-            //if (!playerMover.IsMoving())
-            //{
-            //    Debug.Log("UI Updated");
-            //    //BuildMovementButtons();
-            //    DisplayMoveChoices();
-            //}
-            //else
-            //{
-            //    //...Coming soon....
-            //}
+ 
+            if (!playerMover.IsMoving())
+            {
+                Debug.Log("UI Updated");
+                //BuildMovementButtons();
+                DisplayMoveChoices();
+            }
+            else
+            {
+                //...Coming soon....
+            }
 
         }
         private void DisplayMoveChoices()
