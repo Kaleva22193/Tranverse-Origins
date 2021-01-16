@@ -123,25 +123,24 @@ namespace RPG.UI
             }
         }
 
-        public void MoveDirection(int dir)
+        public void MoveDirection(int dir) // dir = Directions enum int value
         {
-            Directions direction = (Directions) dir;
-
+            Directions direction = (Directions) dir;    // Cast int to Directions to get the string value.
             Debug.Log("Moving : " + direction.ToString());
 
-            int roomIndex = 0;
-            foreach (string moveDirection in playerMover.GetMovementDirections())
+            int roomIndex = 0;  // This bit is similar to above in DisplayMoveChoices, it's the same as listCounter.
+            foreach (string moveDirection in playerMover.GetMovementDirections())   // Go through each movement direction available.
             {
-                Debug.Log(moveDirection);
-                if (moveDirection == direction.ToString())
+                if (moveDirection == direction.ToString())  // similar to if(direction == Directions.XX.ToString() above.
                 {
-                    Debug.Log("room index is: " + roomIndex);
-                    if(playerMover.GetMovementDirections().Count <= roomIndex)
+                    Debug.Log("room index is: " + roomIndex);   
+                    if(playerMover.GetMovementDirections().Count <= roomIndex)  // This shouldn't be needed, but I kept getting errors from GetMovementDirections.
                     {
                         Debug.LogError("Room index is missing from playerMover.GetMovementDirections()!!", playerMover);
-                        return;
+                        return; //Just get out of here!
                     }
-                    playerMover.SelectMove(playerMover.GetChoices().ElementAt(roomIndex));
+                    playerMover.SelectMove(playerMover.GetChoices().ElementAt(roomIndex)); // Now move the player to correct direction!
+                    // .ElementAt(int index) is the same as doing .ToList()[i]
                 }
                 roomIndex++;
             }
