@@ -148,32 +148,6 @@ namespace RPG.UI
             UpdateUI();
         }
 
-        //private void BuildMovementButtons()
-        //{
-        //    foreach(Transform item in directionRoot)
-        //    {
-        //        Destroy(item.gameObject);
-        //    }
 
-        //    foreach (RoomLocation choice in playerMover.GetChoices())
-        //    {
-        //        GameObject choiceInstance = Instantiate(directionPreFab, directionRoot);
-        //        foreach (Transform child in choiceInstance.transform)
-        //        {
-        //            child.gameObject.SetActive(true);
-        //        }
-        //        var textComp = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
-
-        //        textComp.text = choice.GetText();
-
-        //        Button button = choiceInstance.GetComponentInChildren<Button>();
-        //        button.gameObject.SetActive(true);
-        //        button.onClick.AddListener(() =>
-        //        {
-        //            playerMover.SelectMove(choice);
-        //            UpdateUI();
-        //        });
-        //    }
-        //}
     }
 }
