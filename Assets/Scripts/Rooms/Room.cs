@@ -84,41 +84,12 @@ namespace RPG.Rooms
             if (Enum.TryParse<Directions>(location, out Directions direction))
             {
                 newNodeOffset = RoomConstants.NodeOffsets[direction];
+                childNode.SetConnection(direction);
             }
             else
             {
                 Debug.LogError("Unknown Direction!", this);
                 return;
-            }
-
-            switch (location)
-            {
-                case "South":
-                    childNode.SetSouthConnection();
-                    break;
-                case "West":
-                    childNode.SetWestConnection();
-                    break;
-                case "North":
-                    childNode.SetNorthConnection();
-                    break;
-                case "East":
-                    childNode.SetEastConnection(); 
-                    break;
-                case "NorthEast":
-                    childNode.SetNorthEastSouthWestConnection();
-                    break;
-                case "NorthWest":
-                    childNode.SetNorthWestSouthEastConnection();
-                    break;
-                case "SouthEast":
-                    childNode.SetSouthEastNorthWestConnection();
-                    break;
-                case "SouthWest":
-                    childNode.SetSouthWestNorthEastConnection();
-                    break;
-                default:
-                    break;
             }
         }
 
@@ -127,12 +98,7 @@ namespace RPG.Rooms
             locations.Add(childNode);
             OnValidate();
         }
-        private Vector2 NewNodeOffset(float x, float y)
-        {
-            newNodeOffset.x = x;
-            newNodeOffset.y = y;
-            return newNodeOffset;
-        }
+        
         private RoomLocation MakeNode(RoomLocation parent, string location)
         {
             RoomLocation childNode = CreateInstance<RoomLocation>();

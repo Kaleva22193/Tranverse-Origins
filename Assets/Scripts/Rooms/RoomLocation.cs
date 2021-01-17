@@ -222,40 +222,8 @@ namespace RPG.Rooms
             }
             
         }
-        public void SetNorthConnection()
-        {
-            northConnection = SetConnection(Directions.North);
-        }
-        public void SetNorthEastSouthWestConnection()
-        {
-            northEastSouthWestConnection = SetConnection(Directions.NorthEast);
-        }
-
-        public void SetEastConnection()
-        {
-            eastConnection = SetConnection(Directions.East);
-        }
-        public void SetSouthEastNorthWestConnection()
-        {
-            southEastNorthWestConnection = SetConnection(Directions.SouthEast);
-        }
-        public void SetSouthConnection()
-        {
-            southConnection = SetConnection(Directions.South);          
-        }
-        public void SetSouthWestNorthEastConnection()
-        {
-            southWestNorthEastConnection = SetConnection(Directions.SouthWest);
-        }
-        public void SetWestConnection()
-        {
-            westConnection = SetConnection(Directions.West);
-        }
-        public void SetNorthWestSouthEastConnection()
-        {
-            northWestSouthEastConnection = SetConnection(Directions.NorthWest);
-        }
-        private bool SetConnection(Directions direction)
+        
+        public void SetConnection(Directions direction)
         {
             bool connection;
             Undo.RecordObject(this, "Remove connection");
@@ -268,12 +236,38 @@ namespace RPG.Rooms
             {
                 movementDirections.Remove(direction.ToString());
                 connection = false;
-            }            
-            EditorUtility.SetDirty(this);
-            return connection;
-        }
-        
+            }
 
+            switch (direction)
+            {
+                case Directions.North:
+                    northConnection = connection;
+                    break;
+                case Directions.South:
+                    southConnection = connection;
+                    break;
+                case Directions.East:
+                    eastConnection = connection;
+                    break;
+                case Directions.West:
+                    westConnection = connection;
+                    break;
+                case Directions.NorthEast:
+                    northEastSouthWestConnection = connection;
+                    break;
+                case Directions.SouthEast:
+                    southEastNorthWestConnection = connection;
+                    break;
+                case Directions.NorthWest:
+                    northWestSouthEastConnection = connection;
+                    break;
+                case Directions.SouthWest:
+                    southWestNorthEastConnection = connection;
+                    break;
+            }
+
+            EditorUtility.SetDirty(this);
+        }
 #endif
     }
 }
