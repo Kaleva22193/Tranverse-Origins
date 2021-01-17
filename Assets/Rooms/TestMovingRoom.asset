@@ -59,14 +59,10 @@ MonoBehaviour:
     y: 527
     width: 300
     height: 150
-  text: 'Modifying text with one direction adds duplicate direction
-
-    Changed
-    it back to one and it seems to stay there....clicked off and back on still good
-
-'
+  text: Whole new text block and we seem to be good
   locations:
   - fc0ccca3-bbd7-4bd9-ae09-4662a648014b
+  - c4efc083-6420-4df4-91fd-744bac45cbfb
   isLocationChild: 1
   hasNPC: 0
   isEntrance: 0
@@ -75,11 +71,12 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - West
+  - South
   onEnterAction: 
   onExitAction: 
   northConnection: 0
   eastConnection: 0
-  southConnection: 0
+  southConnection: 1
   westConnection: 1
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
@@ -142,8 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2093
-    y: 827
+    x: 2094
+    y: 826
     width: 300
     height: 150
   text: clicked link location
@@ -201,7 +198,7 @@ MonoBehaviour:
   - South
   - North
   - North
-  - North
+  - South
   - South
   onEnterAction: 
   onExitAction: 
@@ -209,47 +206,6 @@ MonoBehaviour:
   eastConnection: 0
   southConnection: 1
   westConnection: 0
-  northEastSouthWestConnection: 0
-  southEastNorthWestConnection: 0
-  southWestNorthEastConnection: 0
-  northWestSouthEastConnection: 0
---- !u!114 &-3411383554540663186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
-  m_Name: 9531edea-cb80-4380-9d63-fbae8c6c6a95
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 2693
-    y: 1127
-    width: 300
-    height: 150
-  text: 'auto double location with one direction. come back and double direction
-
-'
-  locations:
-  - 55011cb9-06f2-4dfe-95b2-77ead70bea71
-  isLocationChild: 1
-  hasNPC: 0
-  isEntrance: 0
-  isExit: 0
-  isTrapped: 0
-  hasObstacle: 0
-  movementDirections:
-  - West
-  onEnterAction: 
-  onExitAction: 
-  northConnection: 0
-  eastConnection: 0
-  southConnection: 0
-  westConnection: 1
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
   southWestNorthEastConnection: 0
@@ -309,15 +265,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2093
-    y: 1127
+    x: 2094
+    y: 1126
     width: 300
     height: 150
   text: succesfully parented child to parent
   locations:
   - 4d50b6f5-4439-452e-b9cf-994858e6b166
   - 53fe7a54-ee38-48c9-a030-de06c00ef369
-  - 9531edea-cb80-4380-9d63-fbae8c6c6a95
   isLocationChild: 1
   hasNPC: 0
   isEntrance: 0
@@ -327,11 +282,10 @@ MonoBehaviour:
   movementDirections:
   - West
   - North
-  - East
   onEnterAction: 
   onExitAction: 
   northConnection: 1
-  eastConnection: 1
+  eastConnection: 0
   southConnection: 0
   westConnection: 1
   northEastSouthWestConnection: 0
@@ -352,7 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 889
+    x: 890
     y: 524
     width: 300
     height: 150
@@ -413,6 +367,7 @@ MonoBehaviour:
   movementDirections:
   - West
   - West
+  - West
   onEnterAction: 
   onExitAction: 
   northConnection: 0
@@ -446,9 +401,9 @@ MonoBehaviour:
   - {fileID: -3057595736941354411}
   - {fileID: -5705392093913707845}
   - {fileID: -3288501605522263312}
-  - {fileID: -3411383554540663186}
   - {fileID: -7936891182780973000}
-  newNodeOffset: {x: 600, y: 0}
+  - {fileID: 4141420058292474893}
+  newNodeOffset: {x: 0, y: 300}
 --- !u!114 &243314863036601115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,9 +434,10 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - West
-  - North
   - East
   - North
+  - East
+  - West
   - East
   - West
   onEnterAction: 
@@ -533,6 +489,45 @@ MonoBehaviour:
   southEastNorthWestConnection: 0
   southWestNorthEastConnection: 0
   northWestSouthEastConnection: 0
+--- !u!114 &4141420058292474893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: c4efc083-6420-4df4-91fd-744bac45cbfb
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2693
+    y: 827
+    width: 300
+    height: 150
+  text: Maybe bby
+  locations:
+  - d5ecab5a-bedc-4409-85aa-930a5e596201
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
 --- !u!114 &5405692347614160222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +556,7 @@ MonoBehaviour:
   isTrapped: 0
   hasObstacle: 0
   movementDirections:
+  - South
   - South
   - South
   onEnterAction: 
