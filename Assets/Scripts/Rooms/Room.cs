@@ -80,40 +80,42 @@ namespace RPG.Rooms
         }
 
         private void ChildNodeFunctions(string location, RoomLocation childNode)
-        {            
+        {
+            if (Enum.TryParse<Directions>(location, out Directions direction))
+            {
+                newNodeOffset = RoomConstants.NodeOffsets[direction];
+            }
+            else
+            {
+                Debug.LogError("Unknown Direction!", this);
+                return;
+            }
+
             switch (location)
             {
                 case "South":
                     childNode.SetSouthConnection();
-                    NewNodeOffset(0f, -300f);
                     break;
                 case "West":
                     childNode.SetWestConnection();
-                    NewNodeOffset(600f, 0f);
                     break;
                 case "North":
                     childNode.SetNorthConnection();
-                    NewNodeOffset(0f, 300f);
                     break;
                 case "East":
                     childNode.SetEastConnection(); 
-                    NewNodeOffset(-600f, 0f);
                     break;
                 case "NorthEast":
                     childNode.SetNorthEastSouthWestConnection();
-                    NewNodeOffset(-400f, 200f);
                     break;
                 case "NorthWest":
                     childNode.SetNorthWestSouthEastConnection();
-                    NewNodeOffset(400f, 200f);
                     break;
                 case "SouthEast":
                     childNode.SetSouthEastNorthWestConnection();
-                    NewNodeOffset(-400f, -200f);
                     break;
                 case "SouthWest":
                     childNode.SetSouthWestNorthEastConnection();
-                    NewNodeOffset(400f, -200f);
                     break;
                 default:
                     break;
