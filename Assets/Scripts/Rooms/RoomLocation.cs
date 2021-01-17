@@ -11,7 +11,7 @@ namespace RPG.Rooms
 
         [SerializeField] [TextArea] string text = null;
         [SerializeField] List<string> locations = new List<string>();
-        [SerializeField] bool isLocationChild = false;
+        [SerializeField] bool isLocationChild = true;
         [SerializeField] bool hasNPC = false;
         [SerializeField] bool isEntrance = false;
         [SerializeField] bool isExit = false;
@@ -224,20 +224,21 @@ namespace RPG.Rooms
         }
         public void SetNorthConnection(bool newConnection)
         {
-            if(newConnection)
-            {
-                Undo.RecordObject(this, "Remove North-South Connection");
-                northConnection = newConnection;
-                movementDirections.Add(Directions.North.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if(!newConnection)
-            {
-                Undo.RecordObject(this, "Replace North-South Connection");
-                northConnection = newConnection;
-                movementDirections.Remove(Directions.North.ToString());
-                EditorUtility.SetDirty(this);
-            }
+            SetConnection(northConnection, Directions.North);
+            //if (newConnection)
+            //{
+            //    Undo.RecordObject(this, "Remove North-South Connection");
+            //    northConnection = newConnection;
+            //    movementDirections.Add(Directions.North.ToString());
+            //    EditorUtility.SetDirty(this);
+            //}
+            //if(!newConnection)
+            //{
+            //    Undo.RecordObject(this, "Replace North-South Connection");
+            //    northConnection = newConnection;
+            //    movementDirections.Remove(Directions.North.ToString());
+            //    EditorUtility.SetDirty(this);
+            //}
 
         }
         public void SetNorthEastSouthWestConnection(bool newConnection)
@@ -362,8 +363,24 @@ namespace RPG.Rooms
                 movementDirections.Remove(Directions.NorthWest.ToString());
                 EditorUtility.SetDirty(this);
             }
+            
+        }
+        private void SetConnection(bool connection, Directions direction)
+        {
+            Undo.RecordObject(this, "Remove connection");
+            connection ^= true;
+            if (!movementDirections.Contains(direction.ToString()))
+            {
+                movementDirections.Add(direction.ToString());
+            }
+            else
+            {
+                movementDirections.Remove(direction.ToString());
+            }            
+            EditorUtility.SetDirty(this);
 
         }
+        
 
 #endif
     }

@@ -55,7 +55,7 @@ namespace RPG.UI
         private void DisplayMoveChoices()
         {
             //look at current location for list of movement directions
-            Debug.Log(playerMover.GetText());
+            //Debug.Log(playerMover.GetText());
             roomNarration.text = playerMover.GetText();
 
             for (int i = 0; i < moveButtons.Length; i++)
@@ -66,8 +66,8 @@ namespace RPG.UI
             int listCounter = 0;
             foreach (string direction in playerMover.GetMovementDirections())
             {
-                Debug.Log(listCounter);
-                Debug.Log(direction);
+                //Debug.Log(listCounter);
+                //Debug.Log(direction);
                 if (direction == Directions.NorthWest.ToString())
                 {
                     ButtonImageSetterOn(0, listCounter);
@@ -146,33 +146,5 @@ namespace RPG.UI
             }
             UpdateUI();
         }
-
-        //private void BuildMovementButtons()
-        //{
-        //    foreach(Transform item in directionRoot)
-        //    {
-        //        Destroy(item.gameObject);
-        //    }
-
-        //    foreach (RoomLocation choice in playerMover.GetChoices())
-        //    {
-        //        GameObject choiceInstance = Instantiate(directionPreFab, directionRoot);
-        //        foreach (Transform child in choiceInstance.transform)
-        //        {
-        //            child.gameObject.SetActive(true);
-        //        }
-        //        var textComp = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
-
-        //        textComp.text = choice.GetText();
-
-        //        Button button = choiceInstance.GetComponentInChildren<Button>();
-        //        button.gameObject.SetActive(true);
-        //        button.onClick.AddListener(() =>
-        //        {
-        //            playerMover.SelectMove(choice);
-        //            UpdateUI();
-        //        });
-        //    }
-        //}
     }
 }

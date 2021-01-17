@@ -1,5 +1,174 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8371765316665662733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 4d50b6f5-4439-452e-b9cf-994858e6b166
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1493
+    y: 1127
+    width: 300
+    height: 150
+  text: Then south again (new) new one
+  locations:
+  - 71529afa-68d2-4c8a-917a-16b0cee64917
+  - 55011cb9-06f2-4dfe-95b2-77ead70bea71
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-7936891182780973000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: d5ecab5a-bedc-4409-85aa-930a5e596201
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2693
+    y: 527
+    width: 300
+    height: 150
+  text: 'Modifying text with one direction adds duplicate direction
+
+    Changed
+    it back to one and it seems to stay there....clicked off and back on still good
+
+'
+  locations:
+  - fc0ccca3-bbd7-4bd9-ae09-4662a648014b
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-6889094506444740255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 34333a61-a621-4d80-8818-cb840ba47511
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1491
+    y: 526
+    width: 300
+    height: 150
+  text: 'You went east
+
+    so far so good'
+  locations:
+  - dd777c57-84d1-40ae-bce9-cd8412a755dd
+  - 71529afa-68d2-4c8a-917a-16b0cee64917
+  isLocationChild: 1
+  hasNPC: 1
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  - South
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-5705392093913707845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 53fe7a54-ee38-48c9-a030-de06c00ef369
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2093
+    y: 827
+    width: 300
+    height: 150
+  text: clicked link location
+  locations:
+  - 55011cb9-06f2-4dfe-95b2-77ead70bea71
+  - fc0ccca3-bbd7-4bd9-ae09-4662a648014b
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
 --- !u!114 &-4074911798739692209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,12 +201,184 @@ MonoBehaviour:
   - South
   - North
   - North
+  - North
+  - South
   onEnterAction: 
   onExitAction: 
   northConnection: 1
   eastConnection: 0
   southConnection: 1
   westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-3411383554540663186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 9531edea-cb80-4380-9d63-fbae8c6c6a95
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2693
+    y: 1127
+    width: 300
+    height: 150
+  text: 'auto double location with one direction. come back and double direction
+
+'
+  locations:
+  - 55011cb9-06f2-4dfe-95b2-77ead70bea71
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-3288501605522263312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: fc0ccca3-bbd7-4bd9-ae09-4662a648014b
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2093
+    y: 527
+    width: 300
+    height: 150
+  text: why are you double locating?
+  locations:
+  - 53fe7a54-ee38-48c9-a030-de06c00ef369
+  - d5ecab5a-bedc-4409-85aa-930a5e596201
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 1
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-3057595736941354411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 55011cb9-06f2-4dfe-95b2-77ead70bea71
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2093
+    y: 1127
+    width: 300
+    height: 150
+  text: succesfully parented child to parent
+  locations:
+  - 4d50b6f5-4439-452e-b9cf-994858e6b166
+  - 53fe7a54-ee38-48c9-a030-de06c00ef369
+  - 9531edea-cb80-4380-9d63-fbae8c6c6a95
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  - North
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-1609693966432557258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: dd777c57-84d1-40ae-bce9-cd8412a755dd
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 889
+    y: 524
+    width: 300
+    height: 150
+  text: 'east of North
+
+    From here we can go all directions'
+  locations:
+  - 86589397-1a50-4bcd-aa64-9a0f2c23860c
+  - b4bedf12-8ac1-4b92-9bad-d29cdbe2a88a
+  - 34333a61-a621-4d80-8818-cb840ba47511
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  - North
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 1
   northEastSouthWestConnection: 0
   southEastNorthWestConnection: 0
   southWestNorthEastConnection: 0
@@ -71,6 +412,7 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - West
+  - West
   onEnterAction: 
   onExitAction: 
   northConnection: 0
@@ -96,10 +438,16 @@ MonoBehaviour:
   locations:
   - {fileID: 3503181093170552828}
   - {fileID: 8668298581794136171}
-  - {fileID: 243314863036601115}
-  - {fileID: -4074911798739692209}
-  - {fileID: 5405692347614160222}
-  - {fileID: -1460296587010908348}
+  - {fileID: -1609693966432557258}
+  - {fileID: 6711117018149789797}
+  - {fileID: -6889094506444740255}
+  - {fileID: 9218505448003646342}
+  - {fileID: -8371765316665662733}
+  - {fileID: -3057595736941354411}
+  - {fileID: -5705392093913707845}
+  - {fileID: -3288501605522263312}
+  - {fileID: -3411383554540663186}
+  - {fileID: -7936891182780973000}
   newNodeOffset: {x: 600, y: 0}
 --- !u!114 &243314863036601115
 MonoBehaviour:
@@ -133,6 +481,9 @@ MonoBehaviour:
   - West
   - North
   - East
+  - North
+  - East
+  - West
   onEnterAction: 
   onExitAction: 
   northConnection: 1
@@ -157,14 +508,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 240
-    y: 415
+    x: 230
+    y: 424
     width: 300
     height: 150
   text: Start here
   locations:
   - 86589397-1a50-4bcd-aa64-9a0f2c23860c
-  - 13ba0573-857b-4de7-8109-ed18c21ddd5f
   isLocationChild: 1
   hasNPC: 0
   isEntrance: 1
@@ -173,11 +523,10 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - North
-  - East
   onEnterAction: 
   onExitAction: 
   northConnection: 1
-  eastConnection: 1
+  eastConnection: 0
   southConnection: 0
   westConnection: 0
   northEastSouthWestConnection: 0
@@ -213,6 +562,46 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - South
+  - South
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &6711117018149789797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: b4bedf12-8ac1-4b92-9bad-d29cdbe2a88a
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 888
+    y: 224
+    width: 300
+    height: 150
+  text: You went north
+  locations:
+  - dd777c57-84d1-40ae-bce9-cd8412a755dd
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South
   onEnterAction: 
   onExitAction: 
   northConnection: 0
@@ -237,13 +626,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 48
-    y: 46
+    x: 236
+    y: 170
     width: 300
     height: 150
   text: Moved North
   locations:
   - 742c44a1-6a7f-47b7-840f-cfbfb138d371
+  - dd777c57-84d1-40ae-bce9-cd8412a755dd
   isLocationChild: 1
   hasNPC: 0
   isEntrance: 0
@@ -252,9 +642,51 @@ MonoBehaviour:
   hasObstacle: 0
   movementDirections:
   - South
+  - East
   onEnterAction: 
   onExitAction: 
   northConnection: 0
+  eastConnection: 1
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &9218505448003646342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 71529afa-68d2-4c8a-917a-16b0cee64917
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1492
+    y: 827
+    width: 300
+    height: 150
+  text: Then South
+  locations:
+  - 34333a61-a621-4d80-8818-cb840ba47511
+  - 4d50b6f5-4439-452e-b9cf-994858e6b166
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - South
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
   eastConnection: 0
   southConnection: 1
   westConnection: 0

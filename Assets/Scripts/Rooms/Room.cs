@@ -72,6 +72,7 @@ namespace RPG.Rooms
 #if UNITY_EDITOR
         public void CreateLocation(RoomLocation parent, string location)
         {
+            //Need to go through this line by line to see if duplicate directions can be prevented...
             RoomLocation childNode = MakeNode(parent, location);
             Undo.RegisterCreatedObjectUndo(childNode, "Created Dialogue Node");
             Undo.RecordObject(this, "Added Dialogue Node");
@@ -138,7 +139,9 @@ namespace RPG.Rooms
             if (parent != null)
             {
                 parent.AddChild(childNode.name);
-                childNode.SetLocationChild(!parent.IsLocationChild()); 
+                //could potentially put the backwards connection here...
+                childNode.AddChild(parent.name);
+                //childNode.SetLocationChild(!parent.IsLocationChild()); 
                 childNode.SetPosition(parent.GetRect().position + newNodeOffset);
  
             }
