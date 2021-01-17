@@ -84,35 +84,35 @@ namespace RPG.Rooms
             switch (location)
             {
                 case "South":
-                    childNode.SetSouthConnection(true);
+                    childNode.SetSouthConnection();
                     NewNodeOffset(0f, -300f);
                     break;
                 case "West":
-                    childNode.SetWestConnection(true);
+                    childNode.SetWestConnection();
                     NewNodeOffset(600f, 0f);
                     break;
                 case "North":
-                    childNode.SetNorthConnection(true);
+                    childNode.SetNorthConnection();
                     NewNodeOffset(0f, 300f);
                     break;
                 case "East":
-                    childNode.SetEastConnection(true); 
+                    childNode.SetEastConnection(); 
                     NewNodeOffset(-600f, 0f);
                     break;
                 case "NorthEast":
-                    childNode.SetNorthEastSouthWestConnection(true);
+                    childNode.SetNorthEastSouthWestConnection();
                     NewNodeOffset(-400f, 200f);
                     break;
                 case "NorthWest":
-                    childNode.SetNorthWestSouthEastConnection(true);
+                    childNode.SetNorthWestSouthEastConnection();
                     NewNodeOffset(400f, 200f);
                     break;
                 case "SouthEast":
-                    childNode.SetSouthEastNorthWestConnection(true);
+                    childNode.SetSouthEastNorthWestConnection();
                     NewNodeOffset(-400f, -200f);
                     break;
                 case "SouthWest":
-                    childNode.SetSouthWestNorthEastConnection(true);
+                    childNode.SetSouthWestNorthEastConnection();
                     NewNodeOffset(400f, -200f);
                     break;
                 default:

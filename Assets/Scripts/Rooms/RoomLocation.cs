@@ -127,26 +127,26 @@ namespace RPG.Rooms
 #if UNITY_EDITOR
         public void OnValidate()
         {
-            if (lastNorthConnection != northConnection)
-            {
-                SetNorthConnection(northConnection);
-                lastNorthConnection = northConnection;
-            }
-            if (lastEastConnection != eastConnection)
-            {
-                SetEastConnection(eastConnection);
-                lastEastConnection = eastConnection;
-            }
-            if (lastSouthConnection != southConnection)
-            {
-                SetSouthConnection(southConnection);
-                lastSouthConnection = southConnection;
-            }
-            if (lastWestConnection != westConnection)
-            {
-                SetWestConnection(westConnection);
-                lastWestConnection = westConnection;
-            }
+            //if (lastNorthConnection != northConnection)
+            //{
+            //    SetNorthConnection();
+            //    lastNorthConnection = northConnection;
+            //}
+            //if (lastEastConnection != eastConnection)
+            //{
+            //    SetEastConnection();
+            //    lastEastConnection = eastConnection;
+            //}
+            //if (lastSouthConnection != southConnection)
+            //{
+            //    SetSouthConnection();
+            //    lastSouthConnection = southConnection;
+            //}
+            //if (lastWestConnection != westConnection)
+            //{
+            //    SetWestConnection();
+            //    lastWestConnection = westConnection;
+            //}
         }
         public void SetPosition(Vector2 newPosition)
         {
@@ -222,162 +222,55 @@ namespace RPG.Rooms
             }
             
         }
-        public void SetNorthConnection(bool newConnection)
+        public void SetNorthConnection()
         {
-            SetConnection(northConnection, Directions.North);
-            //if (newConnection)
-            //{
-            //    Undo.RecordObject(this, "Remove North-South Connection");
-            //    northConnection = newConnection;
-            //    movementDirections.Add(Directions.North.ToString());
-            //    EditorUtility.SetDirty(this);
-            //}
-            //if(!newConnection)
-            //{
-            //    Undo.RecordObject(this, "Replace North-South Connection");
-            //    northConnection = newConnection;
-            //    movementDirections.Remove(Directions.North.ToString());
-            //    EditorUtility.SetDirty(this);
-            //}
+            northConnection = SetConnection(Directions.North);
+        }
+        public void SetNorthEastSouthWestConnection()
+        {
+            northEastSouthWestConnection = SetConnection(Directions.NorthEast);
+        }
 
-        }
-        public void SetNorthEastSouthWestConnection(bool newConnection)
+        public void SetEastConnection()
         {
-            if(newConnection)
-            {
-                Undo.RecordObject(this, "Remove Northeast - Southwest Connection");
-                northEastSouthWestConnection = newConnection;
-                movementDirections.Add(Directions.NorthEast.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if(!newConnection)
-            {
-                Undo.RecordObject(this, "Replace Northeast - Southwest Connection");
-                northEastSouthWestConnection = newConnection;
-                movementDirections.Remove(Directions.NorthEast.ToString());
-                EditorUtility.SetDirty(this);
-            }
+            eastConnection = SetConnection(Directions.East);
         }
-        public void SetEastConnection(bool newConnection)
+        public void SetSouthEastNorthWestConnection()
         {
-            if(newConnection)
-            {
-                Undo.RecordObject(this, "Remove East-West Connection");
-                eastConnection = newConnection;
-                movementDirections.Add(Directions.East.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if(!newConnection)
-            {
-                Undo.RecordObject(this, name: "Replace East-West Connection");
-                eastConnection = newConnection;
-                movementDirections.Remove(Directions.East.ToString());
-                EditorUtility.SetDirty(this);
-            }
+            southEastNorthWestConnection = SetConnection(Directions.SouthEast);
         }
-        public void SetSouthEastNorthWestConnection(bool newConnection)
+        public void SetSouthConnection()
         {
-            if (newConnection)
-            {
-                Undo.RecordObject(this, "Remove Southeast - Northwest Connection");
-                southEastNorthWestConnection = newConnection;
-                movementDirections.Add(Directions.SouthEast.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if (!newConnection)
-            {
-                Undo.RecordObject(this, "Replace Southeast - Northwest Connection");
-                southEastNorthWestConnection = newConnection;
-                movementDirections.Remove(Directions.SouthEast.ToString());
-                EditorUtility.SetDirty(this);
-            }
-
+            southConnection = SetConnection(Directions.South);          
         }
-        public void SetSouthConnection(bool newConnection)
+        public void SetSouthWestNorthEastConnection()
         {
-            if(newConnection)
-            {
-                Undo.RecordObject(this, "Remove South - North Connection");
-                southConnection = newConnection;
-                movementDirections.Add(Directions.South.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if(!newConnection)
-            {
-                Undo.RecordObject(this, "Replace South - North Connection");
-                southConnection = newConnection;
-                movementDirections.Remove(Directions.South.ToString());
-                EditorUtility.SetDirty(this);
-            }
-          
+            southWestNorthEastConnection = SetConnection(Directions.SouthWest);
         }
-        public void SetSouthWestNorthEastConnection(bool newConnection)
+        public void SetWestConnection()
         {
-            if (newConnection)
-            {
-                Undo.RecordObject(this, "Remove Southwest - Northeast Connection");
-                southWestNorthEastConnection = newConnection;
-                movementDirections.Add(Directions.SouthWest.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if (!newConnection)
-            {
-                Undo.RecordObject(this, "Replace Southwest - Northeast Connection");
-                southWestNorthEastConnection = newConnection;
-                movementDirections.Remove(Directions.SouthWest.ToString());
-                EditorUtility.SetDirty(this);
-            }
-
+            westConnection = SetConnection(Directions.West);
         }
-        public void SetWestConnection(bool newConnection)
+        public void SetNorthWestSouthEastConnection()
         {
-            if (newConnection)
-            {
-                Undo.RecordObject(this, "Remove West - East Connection");
-                westConnection = newConnection;
-                movementDirections.Add(Directions.West.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if (!newConnection)
-            {
-                Undo.RecordObject(this, "Replace West - East Connection");
-                westConnection = newConnection;
-                movementDirections.Remove(Directions.West.ToString());
-                EditorUtility.SetDirty(this);
-            }
-
+            northWestSouthEastConnection = SetConnection(Directions.NorthWest);
         }
-        public void SetNorthWestSouthEastConnection(bool newConnection)
+        private bool SetConnection(Directions direction)
         {
-            if (newConnection)
-            {
-                Undo.RecordObject(this, "Remove Northwest - SouthEastConnection");
-                northWestSouthEastConnection = newConnection;
-                movementDirections.Add(Directions.NorthWest.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            if (!newConnection)
-            {
-                Undo.RecordObject(this, "Replace Northwest - SouthEastConnection");
-                northWestSouthEastConnection = newConnection;
-                movementDirections.Remove(Directions.NorthWest.ToString());
-                EditorUtility.SetDirty(this);
-            }
-            
-        }
-        private void SetConnection(bool connection, Directions direction)
-        {
+            bool connection;
             Undo.RecordObject(this, "Remove connection");
-            connection ^= true;
             if (!movementDirections.Contains(direction.ToString()))
             {
                 movementDirections.Add(direction.ToString());
+                connection = true;
             }
             else
             {
                 movementDirections.Remove(direction.ToString());
+                connection = false;
             }            
             EditorUtility.SetDirty(this);
+            return connection;
         }
         
 

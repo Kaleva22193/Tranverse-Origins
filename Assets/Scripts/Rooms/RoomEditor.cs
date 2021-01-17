@@ -175,7 +175,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.NorthWest.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetNorthWestSouthEastConnection(true);
+                    location.SetNorthWestSouthEastConnection();
                     movementLocation = Directions.SouthEast.ToString();
                     
                 }
@@ -185,7 +185,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.North.ToString()))
                 {
                     creatingLocation = location;
-                    //location.SetNorthConnection(true);
+                    location.SetNorthConnection();
                     movementLocation = Directions.South.ToString();
                 }
             }
@@ -194,7 +194,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.NorthEast.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetNorthEastSouthWestConnection(true);
+                    location.SetNorthEastSouthWestConnection();
                     movementLocation = Directions.SouthWest.ToString();
                 }
             }
@@ -205,7 +205,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.West.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetWestConnection(true);
+                    location.SetWestConnection();
                     movementLocation = Directions.East.ToString();
                 }
             }
@@ -218,7 +218,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.East.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetEastConnection(true);
+                    location.SetEastConnection();
                     movementLocation = Directions.West.ToString();                    
                 }
             }
@@ -229,7 +229,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.SouthWest.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetSouthWestNorthEastConnection(true);
+                    location.SetSouthWestNorthEastConnection();
                     movementLocation = Directions.NorthEast.ToString();
                 }
             }
@@ -238,7 +238,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.South.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetSouthConnection(true);
+                    location.SetSouthConnection();
                     movementLocation = Directions.North.ToString();
                 }
             }
@@ -247,7 +247,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.SouthEast.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetSouthEastNorthWestConnection(true);
+                    location.SetSouthEastNorthWestConnection();
                     movementLocation = Directions.NorthWest.ToString();
                 }
             }       
