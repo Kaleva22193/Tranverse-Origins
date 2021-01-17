@@ -4705,7 +4705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0099958db83412438418ecee6a84508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testRoom: {fileID: 11400000, guid: 03e727296b9e6de48be2c03ef71d9ceb, type: 2}
+  testRoom: {fileID: 11400000, guid: efd1537fcb1aba248b78a85d0aa42a4b, type: 2}
 --- !u!114 &1131528254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4718,7 +4718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9be214dee75f364abbb046cbf34ed93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testDialogue: {fileID: 11400000, guid: 186684618a58259429bac82c20c4e70a, type: 2}
+  testDialogue: {fileID: 0}
 --- !u!114 &1131528255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5743,7 +5743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25debfed73488a44b23cb5315598591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 186684618a58259429bac82c20c4e70a, type: 2}
+  dialogue: {fileID: 0}
 --- !u!4 &1575089906
 Transform:
   m_ObjectHideFlags: 0

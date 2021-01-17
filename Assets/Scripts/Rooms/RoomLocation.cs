@@ -378,7 +378,6 @@ namespace RPG.Rooms
                 movementDirections.Remove(direction.ToString());
             }            
             EditorUtility.SetDirty(this);
-
         }
         
 

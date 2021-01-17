@@ -185,7 +185,7 @@ namespace RPG.Rooms.Editor
                 if (GUILayout.Button(Directions.North.ToString()))
                 {
                     creatingLocation = location;
-                    location.SetNorthConnection(true);
+                    //location.SetNorthConnection(true);
                     movementLocation = Directions.South.ToString();
                 }
             }
