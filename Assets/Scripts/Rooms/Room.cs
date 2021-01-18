@@ -83,7 +83,8 @@ namespace RPG.Rooms
         {
             if (Enum.TryParse<Directions>(location, out Directions direction))
             {
-                newNodeOffset = RoomConstants.NodeOffsets[direction];
+                newNodeOffset =
+                    RoomConstants.NodeOffsets[direction];
                 childNode.SetConnection(direction);
             }
             else

@@ -12,21 +12,15 @@ namespace RPG.UI
     public class RoomUI : MonoBehaviour
     {
         PlayerMover playerMover;
-        //[SerializeField] GameObject directionPreFab = null;
-        //[SerializeField] Transform directionRoot = null;
         [SerializeField] GameObject[] moveButtons;
         [SerializeField] TextMeshProUGUI roomNarration;
 
-        //Comment for git change
 
         // Start is called before the first frame update
         void Start()
         {
             playerMover = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMover>();
             playerMover.onLocationUpdated += UpdateUI;
-
-            
-
 
             UpdateUI();
         }
@@ -42,7 +36,6 @@ namespace RPG.UI
             if (!playerMover.IsMoving())
             {
                 Debug.Log("UI Updated");
-                //BuildMovementButtons();
                 DisplayMoveChoices();
             }
             else
@@ -54,7 +47,6 @@ namespace RPG.UI
 
         private void DisplayMoveChoices()
         {
-            //look at current location for list of movement directions
             //Debug.Log(playerMover.GetText());
             roomNarration.text = playerMover.GetText();
 
