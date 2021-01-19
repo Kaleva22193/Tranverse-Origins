@@ -15,12 +15,16 @@ namespace RPG.UI
         [SerializeField] GameObject[] moveButtons;
         [SerializeField] TextMeshProUGUI roomNarration;
 
+        [SerializeField] GameObject investigateButton;
+        [SerializeField] GameObject talkButton;
 
         // Start is called before the first frame update
         void Start()
         {
             playerMover = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMover>();
             playerMover.onLocationUpdated += UpdateUI;
+
+            talkButton.SetActive(false);
 
             UpdateUI();
         }
@@ -37,6 +41,7 @@ namespace RPG.UI
             {
                 Debug.Log("UI Updated");
                 DisplayMoveChoices();
+                LocationHasNPC();
             }
             else
             {
@@ -47,6 +52,7 @@ namespace RPG.UI
 
         private void DisplayMoveChoices()
         {
+
             //Debug.Log(playerMover.GetText());
             roomNarration.text = playerMover.GetText();
 
@@ -102,17 +108,12 @@ namespace RPG.UI
                 moveButtons[number].SetActive(true);
         }
 
-        private void LinkDirectiontoLocation(int number)
+        private void LocationHasNPC()
         {
-            List<RoomLocation> children = playerMover.GetChoices().ToList();
-            for (int i = 0; i < children.Count; i++)
+            if (playerMover.HasNPC())
             {
-                if (i == number)
-                {
-                    playerMover.SelectMove(children[i]);
-                    UpdateUI();
-                }
-            }
+                talkButton.SetActive(true);
+            }            
         }
 
         public void MoveDirection(int dir) // dir = Directions enum int value

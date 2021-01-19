@@ -4800,6 +4800,8 @@ MonoBehaviour:
   - {fileID: 1234780584}
   - {fileID: 1764652450}
   roomNarration: {fileID: 609409548}
+  investigateButton: {fileID: 2129635648}
+  talkButton: {fileID: 1870986270}
 --- !u!1 &1131528252
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,7 +5873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25debfed73488a44b23cb5315598591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: ec7de21c828f35643afadea55f3de184, type: 2}
 --- !u!4 &1575089906
 Transform:
   m_ObjectHideFlags: 0
@@ -7112,6 +7114,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7801738017369224380, guid: 8c48a6bb9067a8f4791cd7656433314c, type: 3}
   m_PrefabInstance: {fileID: 39121980}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1870986270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7801738017369224380, guid: 8c48a6bb9067a8f4791cd7656433314c, type: 3}
+  m_PrefabInstance: {fileID: 2117429236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1923773430
 GameObject:
   m_ObjectHideFlags: 0
@@ -7870,6 +7877,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7801738017369224381, guid: 8c48a6bb9067a8f4791cd7656433314c, type: 3}
   m_PrefabInstance: {fileID: 2117429236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2129635648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7801738017369224380, guid: 8c48a6bb9067a8f4791cd7656433314c, type: 3}
+  m_PrefabInstance: {fileID: 110935872}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8559078598056309511
 PrefabInstance:

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using RPG.UI;
 
 namespace RPG.Dialogue
 {
     public class PlayerConversant : MonoBehaviour
     {
-        [SerializeField] Dialogue testDialogue;
+        
         AIConversant currentConversant = null;
         Dialogue currentDialogue;
         DialogueNode currentNode = null;
@@ -22,8 +23,7 @@ namespace RPG.Dialogue
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
             TriggerEnterAction();
-            onConversationUpdated();
-            
+            onConversationUpdated();            
         }
         public void QuitDialogue()
         {

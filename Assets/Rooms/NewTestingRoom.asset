@@ -1,0 +1,310 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6914212299139052654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 93ccf857-788c-4ca8-9395-cc9807e23917
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1010
+    y: 657
+    width: 300
+    height: 150
+  text: You're south now. Almost to the end
+  locations:
+  - 6d75cb2f-c0ae-4284-bb23-f846601f7bdf
+  - 9df18970-5c0e-4e94-8baf-944e3f631a80
+  - c2fee7f8-178c-473f-a1a4-6eff258f5023
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - South
+  - West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &-5147494156456216116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 9df18970-5c0e-4e94-8baf-944e3f631a80
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1010
+    y: 957
+    width: 300
+    height: 150
+  text: turn right round to go back.
+  locations:
+  - 93ccf857-788c-4ca8-9395-cc9807e23917
+  - 970530bc-aaef-459a-b0b8-1234b7b1a6a8
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - West
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 0
+  southConnection: 0
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed915575262d5a429764dc63559dea0, type: 3}
+  m_Name: NewTestingRoom
+  m_EditorClassIdentifier: 
+  locations:
+  - {fileID: 2579857502053412931}
+  - {fileID: 912286000148795464}
+  - {fileID: 4423756963373724540}
+  - {fileID: -6914212299139052654}
+  - {fileID: -5147494156456216116}
+  - {fileID: 4279121930444715074}
+  - {fileID: 7203925319181288767}
+  newNodeOffset: {x: 0, y: -300}
+--- !u!114 &912286000148795464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: bee93e38-2b93-4578-a493-bd07af826913
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 407
+    y: 59
+    width: 300
+    height: 150
+  text: Dead End to the norf With a burley looking feller
+  locations:
+  - a7edd3f3-aeac-4f5a-b948-a1ba9f15cd9a
+  isLocationChild: 1
+  hasNPC: 1
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &2579857502053412931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: a7edd3f3-aeac-4f5a-b948-a1ba9f15cd9a
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 411
+    y: 357
+    width: 300
+    height: 150
+  text: Starting Point
+  locations:
+  - bee93e38-2b93-4578-a493-bd07af826913
+  - 6d75cb2f-c0ae-4284-bb23-f846601f7bdf
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - North
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &4279121930444715074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 970530bc-aaef-459a-b0b8-1234b7b1a6a8
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 410
+    y: 957
+    width: 300
+    height: 150
+  text: Almost there
+  locations:
+  - 9df18970-5c0e-4e94-8baf-944e3f631a80
+  - c2fee7f8-178c-473f-a1a4-6eff258f5023
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - East
+  - North
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 1
+  eastConnection: 1
+  southConnection: 0
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &4423756963373724540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: 6d75cb2f-c0ae-4284-bb23-f846601f7bdf
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1010
+    y: 357
+    width: 300
+    height: 150
+  text: You went east, good Job!
+  locations:
+  - a7edd3f3-aeac-4f5a-b948-a1ba9f15cd9a
+  - 93ccf857-788c-4ca8-9395-cc9807e23917
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - West
+  - South
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 1
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0
+--- !u!114 &7203925319181288767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a6d042de0b5a14e886306707f7ef2d, type: 3}
+  m_Name: c2fee7f8-178c-473f-a1a4-6eff258f5023
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 410
+    y: 658
+    width: 300
+    height: 150
+  text: wooo you made it
+  locations:
+  - 970530bc-aaef-459a-b0b8-1234b7b1a6a8
+  - 93ccf857-788c-4ca8-9395-cc9807e23917
+  isLocationChild: 1
+  hasNPC: 0
+  isEntrance: 0
+  isExit: 0
+  isTrapped: 0
+  hasObstacle: 0
+  movementDirections:
+  - South
+  - East
+  onEnterAction: 
+  onExitAction: 
+  northConnection: 0
+  eastConnection: 0
+  southConnection: 1
+  westConnection: 0
+  northEastSouthWestConnection: 0
+  southEastNorthWestConnection: 0
+  southWestNorthEastConnection: 0
+  northWestSouthEastConnection: 0

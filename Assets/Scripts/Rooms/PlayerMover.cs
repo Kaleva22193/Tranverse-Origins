@@ -99,6 +99,10 @@ namespace RPG.Rooms
         {
             return isMoving;
         }
+        public bool HasNPC()
+        {
+            return currentLocation.HasNPC();
+        }
     }
 }
 
