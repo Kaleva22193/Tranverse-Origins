@@ -23,6 +23,7 @@ namespace RPG.Dialogue
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
             TriggerEnterAction();
+            Debug.Log("onConversationUpdated invoke has: " + onConversationUpdated.GetInvocationList().Length);
             onConversationUpdated();            
         }
         public void QuitDialogue()
