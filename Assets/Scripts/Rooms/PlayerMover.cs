@@ -56,6 +56,10 @@ namespace RPG.Rooms
         public void SelectMove(RoomLocation chosenLocation)
         {
             currentLocation = chosenLocation;
+            if (chosenLocation.HasNPC())
+            {
+                //psst DialogeUI here is a dialogue...
+            }
             //isMoving = true;
             //TriggerEnterAction();            
         }
